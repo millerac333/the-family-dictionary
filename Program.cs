@@ -1,6 +1,4 @@
-﻿//  2. Next, iterate over each item in myFamily and produce the following output.
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace family_dictionary
@@ -16,11 +14,19 @@ namespace family_dictionary
 
             myFamily.Add("father", new Dictionary<string, string>() { { "name", "Joseph" }, { "age", "60" } });
 
-            myFamily.Add("brother", new Dictionary<string, string>() { { "name", "Austin" }, { "age", "32" } });
+            myFamily.Add("older brother", new Dictionary<string, string>() { { "name", "Austin" }, { "age", "32" } });
 
-            myFamily.Add("brother", new Dictionary<string, string>() { { "name", "Shane" }, { "age", "28" } });
+            myFamily.Add("younger brother", new Dictionary<string, string>() { { "name", "Shane" }, { "age", "28" } });
 
-            myFamily.Add("me", new Dictionary<string, string>() { { "name", "Aaron" }, { "age", "30" } });
+            myFamily.Add("alter ego", new Dictionary<string, string>() { { "name", "Knight Shadow" }, { "age", "5343" } });
+
+            // Next, iterate over each item in myFamily 
+            foreach (var person in myFamily)
+            {
+                Console.WriteLine($"{person.Value["name"]} is my {person.Key} and is {person.Value["age"]} years old");
+            }
         }
     }
 }
+
+// Krista is my sister and is 42 years old
